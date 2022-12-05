@@ -1,12 +1,11 @@
-import './app.css';
 import Container from './components/DefaultComponents/Container/Container';
 import ContainerHeader from './components/DefaultComponents/Container/ContainerHeader';
 import ContainerContent from './components/DefaultComponents/Container/ContainerContent';
 import Button from './components/DefaultComponents/Button/Button';
 import Task from './Interfaces/Task';
+import './app.css';
 
 export function App() {
-  
   return (
     <>
       <main>
