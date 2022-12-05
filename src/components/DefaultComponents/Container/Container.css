@@ -48,7 +48,7 @@
     font-size: 40px;
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1980px) {
     .container__header {
         min-height: 100px;
     }
@@ -58,7 +58,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .container
     {
         padding: 0px 60px;
@@ -95,5 +95,19 @@
     .container__header h2
     {
         font-size: 35px;
+    }
+}
+
+@media (max-height: 1980px) {
+    .container
+    {
+        max-height: 900px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container__header h2
+    {
+        font-size: 32px;
     }
 }
