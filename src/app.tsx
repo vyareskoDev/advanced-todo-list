@@ -2,10 +2,26 @@ import Container from './components/DefaultComponents/Container/Container';
 import ContainerHeader from './components/DefaultComponents/Container/ContainerHeader';
 import ContainerContent from './components/DefaultComponents/Container/ContainerContent';
 import Button from './components/DefaultComponents/Button/Button';
+import {useState} from "preact/hooks";
 import Task from './Interfaces/Task';
+import Category from './Interfaces/Category';
 import './app.css';
 
 export function App() {
+  let [categories, setCategories] = useState<Category[]>([
+    {
+      id: 0, 
+      name: "Personal",
+      tasksCount: 10,
+      headerColor: "#82A5AA"
+    },
+    {
+      id: 1,
+      name: "Job",
+      tasksCount: 3,
+      headerColor: "#82AA83"
+    },
+  ]);
   return (
     <>
       <main>
