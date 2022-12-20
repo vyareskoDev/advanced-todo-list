@@ -5,6 +5,7 @@ import Button from './components/DefaultComponents/Button/Button';
 import {useState} from "preact/hooks";
 import Task from './Interfaces/Task';
 import Category from './Interfaces/Category';
+import CategoryImpl from './components/Category/CategoryImpl';
 import './app.css';
 
 export function App() {
@@ -13,13 +14,53 @@ export function App() {
       id: 0, 
       name: "Personal",
       tasksCount: 10,
-      headerColor: "#82A5AA"
+      headerColor: "#82A5AA",
+      tasks: [
+        {
+          id: 0,
+          title: "Hi!",
+          text: "Example",
+          date: new Date(Date.now())
+        },
+        {
+          id: 1,
+          title: "Hi2!",
+          text: "Example2",
+          date: new Date(Date.now())
+        },
+        {
+          id: 2,
+          title: "Hi3!",
+          text: "Example3",
+          date: new Date(Date.now())
+        },
+      ]
     },
     {
       id: 1,
       name: "Job",
       tasksCount: 3,
-      headerColor: "#82AA83"
+      headerColor: "#82AA83",
+      tasks: [
+        {
+          id: 0,
+          title: "Hi!",
+          text: "Example",
+          date: new Date(Date.now())
+        },
+        {
+          id: 1,
+          title: "Hi2!",
+          text: "Example2",
+          date: new Date(Date.now())
+        },
+        {
+          id: 2,
+          title: "Hi3!",
+          text: "Example3",
+          date: new Date(Date.now())
+        },
+      ]
     },
   ]);
   return (
@@ -37,7 +78,13 @@ export function App() {
             </section>
           </ContainerHeader>
           <ContainerContent>
-
+            <section class="categories">
+              {
+              categories.map(category => 
+                <CategoryImpl category={category} />
+                )
+              }
+              </section>
           </ContainerContent>
         </Container>
       </main>

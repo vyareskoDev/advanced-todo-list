@@ -9,6 +9,22 @@ button
     vertical-align: middle;
 }
 
+button:hover
+{
+    background-color: #6296c7;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all .2s ease-in;
+}
+
+button:active
+{
+    background-color: #5e95c9;
+    cursor: pointer;
+    transform: scale(.93);
+    transition: all .2s ease-in;
+}
+
 
 @media (min-width: 2000px) {
     button
